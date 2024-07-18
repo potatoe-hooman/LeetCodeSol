@@ -1,0 +1,37 @@
+# Intuition
+Potatoe Hooman Quest
+
+# Approach
+Just check sums and avoid repeating any commbination
+*(Is this even ethical to use hashmap for an array problem?)*
+# Complexity
+Time complexity:
+- O(N) - length number of iterations 
+
+Space complexity:
+- O(1) - fixed space
+<!-- Add your space complexity here, e.g. $$O(n)$$ -->
+
+# Code
+```
+class Solution {
+    public int[] twoSum(int[] nums, int target) {
+        int i =0; 
+        int j =1;
+        int[] arr = {-1,-1};
+        while (i<nums.length && j < nums.length){
+            if(nums[i]+nums[j] == target){
+                arr[0]=i;
+                arr[1]=j;
+                return arr;
+            }
+            j++;
+            if(j==nums.length){
+                i++;
+                j=i+1;
+            }
+        }
+         return  arr ;
+    }
+}
+```
