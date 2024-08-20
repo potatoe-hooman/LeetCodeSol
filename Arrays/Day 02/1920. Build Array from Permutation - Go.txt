@@ -1,0 +1,8 @@
+func buildArray(nums []int) []int {
+    var leng int = len(nums)
+    rt := make([]int, leng)
+    for i:=0 ; i<leng; i++{
+        rt[i]=nums[nums[i]]
+    }
+    return rt;
+}
