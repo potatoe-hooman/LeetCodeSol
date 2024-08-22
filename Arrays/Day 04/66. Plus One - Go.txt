@@ -1,0 +1,19 @@
+func plusOne(digits []int) []int {
+    last_index := len(digits)-1
+    rt := make([]int, last_index+2)  
+
+    for last_index >=-1{
+        if(last_index==-1){
+            rt[0] = 1 
+            return rt;
+        }
+        if digits[last_index] !=9 {
+            digits[last_index] = digits[last_index] +1
+            return digits
+        } else {
+            digits[last_index] = 0
+            last_index--
+        }
+    }
+    return digits
+}
